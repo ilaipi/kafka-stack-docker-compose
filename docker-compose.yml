@@ -51,6 +51,7 @@ services:
       KAFKA_INTER_BROKER_LISTENER_NAME: LISTENER_DOCKER_INTERNAL
       KAFKA_ZOOKEEPER_CONNECT: "zoo1:3821,zoo2:3822,zoo3:3823"
       KAFKA_BROKER_ID: 1
+      KAFKA_JMX_PORT: "49999"
       KAFKA_LOG4J_LOGGERS: "kafka.controller=INFO,kafka.producer.async.DefaultEventHandler=INFO,state.change.logger=INFO"
     volumes:
       - ./data/kafka1:/var/lib/kafka/data
@@ -70,6 +71,7 @@ services:
       KAFKA_INTER_BROKER_LISTENER_NAME: LISTENER_DOCKER_INTERNAL
       KAFKA_ZOOKEEPER_CONNECT: "zoo1:3821,zoo2:3822,zoo3:3823"
       KAFKA_BROKER_ID: 2
+      KAFKA_JMX_PORT: "49999"
       KAFKA_LOG4J_LOGGERS: "kafka.controller=INFO,kafka.producer.async.DefaultEventHandler=INFO,state.change.logger=INFO"
     volumes:
       - ./data/kafka2:/var/lib/kafka/data
@@ -91,6 +93,7 @@ services:
       KAFKA_INTER_BROKER_LISTENER_NAME: LISTENER_DOCKER_INTERNAL
       KAFKA_ZOOKEEPER_CONNECT: "zoo1:3821,zoo2:3822,zoo3:3823"
       KAFKA_BROKER_ID: 3
+      KAFKA_JMX_PORT: "49999"
       KAFKA_LOG4J_LOGGERS: "kafka.controller=INFO,kafka.producer.async.DefaultEventHandler=INFO,state.change.logger=INFO"
     volumes:
       - ./data/kafka3:/var/lib/kafka/data
